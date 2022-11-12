@@ -12,7 +12,7 @@ public class ArrayCreating {
         this(10);
     }
 
-    public ArrayCreating(int length) {
+    public ArrayCreating(final int length) {
         if (length < 10) {
             return;
         }
@@ -23,14 +23,14 @@ public class ArrayCreating {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(final int length) {
         if (length < 10) {
             return;
         }
         this.length = length;
     }
 
-    public void setArray(int[] array) {
+    public void setArray(final int[] array) {
         if (array == null) {
             return;
         }
