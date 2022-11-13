@@ -1,6 +1,5 @@
 package com.shulha;
 
-import com.shulha.creating.ArrayCreating;
 import com.shulha.lock.Lock;
 import com.shulha.sorting.ArraySorting;
 
@@ -24,17 +23,15 @@ public class Main {
         }
         System.out.println();
 
-        final ArrayCreating arrayCreating = new ArrayCreating(length);
-        int[] randomArray = arrayCreating.getRandomArray();
+        final ArraySorting arraySorting = new ArraySorting(length);
         System.out.println("Your random unsorted array: ");
-        System.out.println(Arrays.toString(randomArray));
+        System.out.println(Arrays.toString(arraySorting.getArray()));
 
         System.out.println();
         System.out.println("Choose your sorting method: ");
         System.out.println("Write '1' if you wanna sort by ascending");
         System.out.println("Write '2' if you wanna sort by descending");
 
-        final ArraySorting arraySorting = new ArraySorting(randomArray);
         scanner = new Scanner(System.in);
 
         while (!scanner.hasNextInt()) {
