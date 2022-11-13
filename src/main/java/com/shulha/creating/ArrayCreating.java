@@ -19,22 +19,11 @@ public class ArrayCreating {
         this.length = length;
     }
 
-    public int getLength() {
-        return length;
-    }
-
     public void setLength(final int length) {
         if (length < 10) {
             return;
         }
         this.length = length;
-    }
-
-    public void setArray(final int[] array) {
-        if (array == null) {
-            return;
-        }
-        this.array = array;
     }
 
     public int[] getRandomArray() {
