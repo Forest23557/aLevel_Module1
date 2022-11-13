@@ -1,6 +1,7 @@
 package com.shulha;
 
 import com.shulha.creating.ArrayCreating;
+import com.shulha.lock.Lock;
 import com.shulha.sorting.ArraySorting;
 
 import java.util.Arrays;
@@ -55,6 +56,23 @@ public class Main {
         }
         System.out.println("Your random sorted array: ");
         System.out.println(Arrays.toString(arraySorting.getArray()));
+        System.out.println();
+
+        arraySorting.toCube(3);
+        System.out.println("Each third element is cubed: ");
+        System.out.println(Arrays.toString(arraySorting.getArray()));
+        System.out.println();
+
+        Lock lock = new Lock(arraySorting.getArray());
+        System.out.println("Your locked array: ");
+        lock.printArray();
+        System.out.println();
+
+        lock.getArray()[0] = 121;
+        lock.getArray()[2] = 1;
+        lock.getArray()[4] = 9;
+        System.out.println("Your array after trying to change it: ");
+        lock.printArray();
         System.out.println();
     }
 }

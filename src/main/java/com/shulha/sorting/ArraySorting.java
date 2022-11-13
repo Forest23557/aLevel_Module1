@@ -25,6 +25,17 @@ public class ArraySorting {
         this.array = array;
     }
 
+    public void toCube(int step) {
+        if (step < 1) {
+            return;
+        }
+
+        for (int i = step - 1; i < array.length; i += step) {
+            double number = array[i];
+            array[i] = (int) Math.pow(number, 3.0d);
+        }
+    }
+
     public void ascendingSort() {
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array.length - i - 1; j++) {
