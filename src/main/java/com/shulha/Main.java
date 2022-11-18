@@ -47,9 +47,17 @@ public class Main {
         System.out.println();
 
         if (answer == 1) {
-            arraySorting.ascendingSort();
+            if (length < 50) {
+                arraySorting.ascendingInsertionSorting();
+            } else {
+                arraySorting.usingAscendingQuickSort();
+            }
         } else {
-            arraySorting.descendingSort();
+            if (length < 50) {
+                arraySorting.descendingInsertionSorting();
+            } else {
+                arraySorting.usingDescendingQuickSort();
+            }
         }
         System.out.println("Your random sorted array: ");
         System.out.println(Arrays.toString(arraySorting.getArray()));
