@@ -54,7 +54,7 @@ public class ArraySorting {
 
     public void descendingBubbleSort() {
         for (int i = 0; i < length; i++) {
-            for (int j = length - 1; j > 0 + i; j--) {
+            for (int j = length - 1; j > i; j--) {
                 if (array[j] > array[j - 1]) {
                     int temp = array[j];
                     array[j] = array[j - 1];
