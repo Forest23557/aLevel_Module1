@@ -3,21 +3,16 @@ package com.shulha.sorting;
 import com.shulha.creating.ArrayCreating;
 
 public class ArraySorting {
-    private int length;
     private int[] array;
 
     public ArraySorting(final int length) {
         if (length < 10) {
             return;
         }
-        this.length = length;
         this.array = new ArrayCreating(length).getRandomArray();
     }
 
     public int[] getArray() {
-        if (array == null) {
-            return null;
-        }
         return array;
     }
 
@@ -26,7 +21,6 @@ public class ArraySorting {
             return;
         }
         this.array = array;
-        this.length = array.length;
     }
 
     public void toCube(int step) {
@@ -34,15 +28,15 @@ public class ArraySorting {
             return;
         }
 
-        for (int i = step - 1; i < length; i += step) {
+        for (int i = step - 1; i < array.length; i += step) {
             double number = array[i];
             array[i] = (int) Math.pow(number, 3.0d);
         }
     }
 
     public void ascendingBubbleSort() {
-        for (int i = 0; i < length; i++) {
-            for (int j = 0; j < length - i - 1; j++) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
                 if (array[j] > array[j + 1]) {
                     int temp = array[j];
                     array[j] = array[j + 1];
@@ -53,8 +47,8 @@ public class ArraySorting {
     }
 
     public void descendingBubbleSort() {
-        for (int i = 0; i < length; i++) {
-            for (int j = length - 1; j > i; j--) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = array.length - 1; j > i; j--) {
                 if (array[j] > array[j - 1]) {
                     int temp = array[j];
                     array[j] = array[j - 1];
