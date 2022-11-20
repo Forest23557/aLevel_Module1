@@ -96,7 +96,7 @@ public class ArraySorting {
                 array[indexOfPivot + 1] = array[j];
                 array[j] = temp;
 
-                indexOfPivot ++;
+                indexOfPivot++;
             }
         }
 
@@ -119,7 +119,7 @@ public class ArraySorting {
                 array[indexOfPivot + 1] = array[j];
                 array[j] = temp;
 
-                indexOfPivot ++;
+                indexOfPivot++;
             }
         }
 
