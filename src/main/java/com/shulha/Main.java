@@ -13,12 +13,11 @@ public class Main {
 
         while (!scanner.hasNextInt()) {
             System.out.println("You wrote wrong type of data! Write an array length: ");
-            scanner = new Scanner(System.in);
+            scanner.next();
         }
         int length = scanner.nextInt();
         while (length < 10) {
             System.out.println("You wrote wrong length (at least 10)! Write an array length: ");
-            scanner = new Scanner(System.in);
             length = scanner.nextInt();
         }
         System.out.println();
@@ -36,12 +35,11 @@ public class Main {
 
         while (!scanner.hasNextInt()) {
             System.out.println("Choose your answer from the instruction above: ");
-            scanner = new Scanner(System.in);
+            scanner.next();
         }
         int answer = scanner.nextInt();
         while (answer < 1 || answer > 2) {
             System.out.println("Choose your answer from the instruction above: ");
-            scanner = new Scanner(System.in);
             answer = scanner.nextInt();
         }
         System.out.println();
